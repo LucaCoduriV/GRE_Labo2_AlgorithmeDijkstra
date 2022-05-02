@@ -4,6 +4,8 @@
  */
 package coduri.luca;
 
+import coduri.luca.graph.EdgeWeighterImpl;
+import coduri.luca.graph.VertexFactory;
 import graph.core.impl.SimpleWeightedEdgeFactory;
 import graph.reader.CartesianGraphReader;
 
@@ -18,13 +20,18 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         var graph = new CartesianGraphReader<>(
-                null                                    /* TODO: Fournir une fabrique de sommets (il
-                                                            s'agit d'une interface fonctionnelle) */,
-                new SimpleWeightedEdgeFactory<>(null    /* TODO: Fournir une fonction de pondération
-                                                            renvoyant la distance euclidienne (arrondie
-                                                            à l'entier le plus proche) entre l'extrémité
-                                                            initiale et l'extrémité finale de l'arête */),
-                DATA_FOLDER + "?"                       /* TODO: Chemin des fichiers */
+                new VertexFactory()                                         /* TODO: Fournir une fabrique de sommets (il
+                                                                            s'agit d'une interface fonctionnelle) */,
+                new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()      /* TODO: Fournir une fonction de pondération
+                                                                            renvoyant la distance euclidienne (arrondie
+                                                                            à l'entier le plus proche) entre l'extrémité
+                                                                            initiale et l'extrémité finale de l'arête */),
+                DATA_FOLDER + "R15_1.txt"                                   /* TODO: Chemin des fichiers */
         ).graph();
+
+
+        System.out.println(graph.getSuccessorList(1).get(0).to());
+        System.out.println(graph.getSuccessorList(1).get(0).from());
+        System.out.println(graph.getSuccessorList(1).get(0).weight());
     }
 }

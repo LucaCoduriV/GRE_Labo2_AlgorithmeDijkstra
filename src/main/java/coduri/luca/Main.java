@@ -4,12 +4,19 @@
  */
 package coduri.luca;
 
+import coduri.luca.dijkstra.Dijkstra;
 import coduri.luca.graph.EdgeWeighterImpl;
 import coduri.luca.graph.VertexFactory;
+import coduri.luca.graph.VertexImpl;
+import graph.core.Vertex;
+import graph.core.impl.SimpleWeightedEdge;
 import graph.core.impl.SimpleWeightedEdgeFactory;
 import graph.reader.CartesianGraphReader;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Main {
     /*
@@ -29,9 +36,9 @@ public class Main {
                 DATA_FOLDER + "R15_1.txt"                                   /* TODO: Chemin des fichiers */
         ).graph();
 
+        Dijkstra dijkstra = new Dijkstra(graph);
 
-        System.out.println(graph.getSuccessorList(1).get(0).to());
-        System.out.println(graph.getSuccessorList(1).get(0).from());
-        System.out.println(graph.getSuccessorList(1).get(0).weight());
+        dijkstra.resolve();
+
     }
 }

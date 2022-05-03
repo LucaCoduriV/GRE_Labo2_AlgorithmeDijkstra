@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GRE-2122b-chapitre5.1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GRE-2122b-chapitre5.2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Couple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/EdgeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/EdgeWeighterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/VertexFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/VertexImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/EdgeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/EdgeWeighterImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/VertexFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/VertexImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/customList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CustomList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +43,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220502_0003",
+    "com.google.cloudcode.ide_session_index": "20220502_0005",
+    "last_opened_file_path": "B:/Users/lucac/Documents/GitHub/GRE_Labo2_AlgorithmeDijkstra",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -67,7 +53,7 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="coduri.luca.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coduri.luca.Main" />
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
@@ -95,6 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1651498075992</updated>
       <workItem from="1651498077383" duration="8750000" />
+      <workItem from="1651519691040" duration="119000" />
+      <workItem from="1651519828253" duration="16337000" />
     </task>
     <servers />
   </component>

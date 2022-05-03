@@ -3,12 +3,13 @@ package coduri.luca.dijkstra;
 import coduri.luca.graph.VertexImpl;
 
 class Couple {
+    static final int INFINITY = Integer.MAX_VALUE;
     private int weight;
     private VertexImpl predecessor;
 
-    Couple(int weight, VertexImpl predecessor) {
-        this.weight = weight;
-        this.predecessor = predecessor;
+    Couple() {
+        this.weight = INFINITY;
+        this.predecessor = null;
     }
 
     int getWeight() {
@@ -25,5 +26,9 @@ class Couple {
 
     void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    void addWeight(int weight){
+        this.weight += weight;
     }
 }

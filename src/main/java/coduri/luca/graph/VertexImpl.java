@@ -13,10 +13,6 @@ public class VertexImpl implements Vertex {
         this.y = y;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public int getX() {
         return x;
     }
@@ -27,7 +23,7 @@ public class VertexImpl implements Vertex {
 
     @Override
     public int id() {
-        return 0;
+        return id;
     }
 
     @Override

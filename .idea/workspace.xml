@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/GraphGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/PathTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/BiDijkstra.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -54,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220504_0010",
+    "com.google.cloudcode.ide_session_index": "20220504_0012",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
@@ -75,7 +71,7 @@
       <recent name="coduri.luca.dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DijkstraBidirectionalTest.resolve15">
+  <component name="RunManager" selected="JUnit.DijkstraBidirectionalTest">
     <configuration name="DijkstraBidirectionalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
@@ -91,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DijkstraBidirectionalTest.resolve10000_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DijkstraBidirectionalTest.resolve10000_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
@@ -101,7 +97,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
       <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraBidirectionalTest" />
-      <option name="METHOD_NAME" value="resolve10000_2" />
+      <option name="METHOD_NAME" value="resolve10000_1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DijkstraSimpleTest.resolve50000_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PathTest.joinPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +143,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraSimpleTest" />
-      <option name="METHOD_NAME" value="resolve50000_1" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.PathTest" />
+      <option name="METHOD_NAME" value="joinPath" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve15" />
-        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve10000_2" />
-        <item itemvalue="JUnit.DijkstraSimpleTest" />
         <item itemvalue="JUnit.DijkstraBidirectionalTest" />
-        <item itemvalue="JUnit.DijkstraSimpleTest.resolve50000_1" />
+        <item itemvalue="JUnit.DijkstraSimpleTest" />
+        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve10000_1" />
+        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve15" />
+        <item itemvalue="JUnit.PathTest.joinPath" />
       </list>
     </recent_temporary>
   </component>
@@ -174,9 +170,8 @@
       <updated>1651498075992</updated>
       <workItem from="1651498077383" duration="8750000" />
       <workItem from="1651519691040" duration="119000" />
-      <workItem from="1651519828253" duration="16337000" />
-      <workItem from="1651563924949" duration="22486000" />
-      <workItem from="1651654799176" duration="20745000" />
+      <workItem from="1651519828253" duration="16360000" />
+      <workItem from="1651690710031" duration="14039000" />
     </task>
     <servers />
   </component>
@@ -193,5 +188,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="coduri.luca.dijkstra.Path" memberName="path" />
+        <PinnedItemInfo parentTag="coduri.luca.dijkstra.DijkstraBidirectional" memberName="bestPath" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

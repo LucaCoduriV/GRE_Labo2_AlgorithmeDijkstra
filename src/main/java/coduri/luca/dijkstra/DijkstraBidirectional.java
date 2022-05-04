@@ -18,45 +18,54 @@ public class DijkstraBidirectional implements Dijkstra{
         this.graph = graph;
         this.sourceId = sourceId;
         this.destinationId = destinationId;
+        this.bestPath = new Path(Couple.INFINITY, new int[0]);
     }
 
     public Dijkstra resolve(){
         this.forward = new DijkstraSimple(graph, sourceId, destinationId);
         this.backward = new DijkstraSimple(graph, destinationId, destinationId);
-        boolean[] computedVertex = new boolean[graph.getNVertices()];
 
         int lastForward;
         int lastBackward = -1;
+        Path result = null;
 
-        do{
+        while(true){
             forward.nextIt();
             lastForward = forward.getLastCoupleRemoved().getVertex().id();
-            if(computedVertex[lastForward]){
-                final Path newPathF = getPath(forward.getState(), sourceId, lastForward);
-                final Path newPathB = getPath(backward.getState(), sourceId, lastBackward);
-                final Path newPath =
-                bestPath = bestPath == null ? newPath :
-                        bestPath.getTotalWeight() <= newPath.getTotalWeight() ? bestPath : newPath ;
+
+            graph.getSuccessorList(lastForward).forEach(v ->{
+                if(backward.getState()[v.to().id()].isCompleted()){
+                    final Path newPathF = getPath(forward.getState(), v.to().id());
+                    final Path newPathB = getPath(backward.getState(), v.to().id());
+                    final Path newPath = Path.joinPath(newPathF, newPathB);
+                    bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
+                }
+
+
+            });
+
+            if(backward.getPrioQueue().get(lastForward).isCompleted()){
                 break;
-            }else{
-                computedVertex[lastForward] = true;
             }
+
 
             backward.nextIt();
             lastBackward = backward.getLastCoupleRemoved().getVertex().id();
-            if(computedVertex[lastBackward]){
-                final Path newPath = getPath(backward.getState(), sourceId, lastBackward);
-                bestPath = bestPath == null ? newPath :
-                        bestPath.getTotalWeight() <= newPath.getTotalWeight() ? bestPath : newPath ;
+
+            graph.getSuccessorList(lastBackward).forEach(v ->{
+                if(forward.getState()[v.to().id()].isCompleted()){
+                    final Path newPathF = getPath(forward.getState(), v.to().id());
+                    final Path newPathB = getPath(backward.getState(), v.to().id());
+                    final Path newPath = Path.joinPath(newPathF, newPathB);
+                    bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
+                }
+            });
+
+            if(forward.getPrioQueue().get(lastBackward).isCompleted()){
                 break;
-            }else{
-                computedVertex[lastBackward] = true;
             }
 
-        }while(true);
-
-        System.out.println(getPath(forward.getState(), sourceId, lastForward));
-        System.out.println(getPath(backward.getState(), destinationId, lastBackward));
+        }
 
         return this;
     }
@@ -64,27 +73,27 @@ public class DijkstraBidirectional implements Dijkstra{
     private void onPathFound(int intermediateId){
         System.out.println("Found path");
         bestPath =
-        getPath(forward.getState(), sourceId, intermediateId);
-        getPath(backward.getState(), destinationId, intermediateId);
+        getPath(forward.getState(), intermediateId);
+        getPath(backward.getState(), intermediateId);
 
     }
 
     @Override
-    public Integer[] getPath() {
-        return new Integer[0];
+    public Path getPath() {
+        return bestPath;
     }
 
-    private static Path getPath(Couple[] path, int sourceId, int destinationId){
+    private static Path getPath(Couple[] path, int destinationId){
         LinkedList<Integer> l = new LinkedList<>();
         long totalWeight = 0;
         int nextId = destinationId;
-        while(nextId != sourceId){
+        while(true){
             var curr = path[nextId];
             l.addFirst(curr.getVertex().id());
             totalWeight += curr.getWeight();
+            if(curr.getPredecessor() == null) break;
             nextId = curr.getPredecessor().id();
         }
-        l.addFirst(sourceId);
 
         return new Path(totalWeight, l.stream().mapToInt(i -> i).toArray());
     }

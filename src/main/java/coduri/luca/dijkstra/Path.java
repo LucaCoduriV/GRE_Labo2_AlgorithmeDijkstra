@@ -19,9 +19,16 @@ public class Path {
         return path;
     }
 
-    Path joinPath(Path forward, Path backward){
-        
-        return new Path();
+    static Path joinPath(Path forward, Path backward){
+        final int[] newPath = new int[forward.path.length + backward.path.length - 1];
+        System.arraycopy(forward.path,0,newPath,0,forward.path.length);
+
+        int j = forward.path.length;
+        for (int i = (backward.path.length - 2); i >= 0; i--){
+            newPath[j++] = backward.path[i];
+        }
+
+        return new Path(forward.totalWeight + backward.totalWeight, newPath);
     }
 
     @Override

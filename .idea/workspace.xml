@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/BiDijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/BiDijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Couple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Couple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220504_0000",
+    "com.google.cloudcode.ide_session_index": "20220504_0004",
     "full.screen.before.presentation.mode": "false",
     "last_opened_file_path": "B:/Users/lucac/Documents/GitHub/GRE_Labo2_AlgorithmeDijkstra",
     "nodejs_package_manager_path": "npm",
@@ -75,7 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.coduri.luca.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +87,8 @@
       <workItem from="1651498077383" duration="8750000" />
       <workItem from="1651519691040" duration="119000" />
       <workItem from="1651519828253" duration="16337000" />
-      <workItem from="1651563924949" duration="20515000" />
+      <workItem from="1651563924949" duration="22486000" />
+      <workItem from="1651654799176" duration="4558000" />
     </task>
     <servers />
   </component>

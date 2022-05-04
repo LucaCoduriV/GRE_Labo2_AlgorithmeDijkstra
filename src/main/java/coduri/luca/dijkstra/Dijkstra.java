@@ -5,6 +5,8 @@ import graph.core.impl.Digraph;
 import graph.core.impl.SimpleWeightedEdge;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Dijkstra {
     private static final String CONNEXE_CIRCUIT_ERROR = "Le graph n'est pas connexe";
@@ -14,10 +16,13 @@ public class Dijkstra {
 
     /** les couples poids et prédécesseur **/
     private final CouplePrioQueue pq;
+    private final int destinationId;
+    private final int sourceId;
 
 
-    public Dijkstra(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, DijkstraCallback callback) {
-
+    public Dijkstra(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback) {
+        this.destinationId = destinationId;
+        this.sourceId = sourceId;
         this.graph = graph;
         final VertexImpl[] vertices = graph.getVertices().toArray(VertexImpl[]::new);
         final Couple[] couples = Arrays.stream(vertices).map(Couple::new).toArray(Couple[]::new);
@@ -28,16 +33,17 @@ public class Dijkstra {
         pq.update(pq.get(sourceId));
     }
 
-    public Dijkstra(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId){
-        this(graph,sourceId,null);
+    public Dijkstra(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId){
+        this(graph,sourceId,destinationId,null);
     }
 
     public Couple[] resolve(){
         while(nextIt());
+        printPath(pq.getCouples(),sourceId,destinationId);
         return pq.getCouples();
     }
 
-    public boolean nextIt(){
+    boolean nextIt(){
         Couple currentCouple;
         if((currentCouple = pq.poll()) == null){
             return false;
@@ -52,10 +58,14 @@ public class Dijkstra {
         if(callback != null)
             callback.onIterationComplete(pq);
 
+        if(currentCouple.getVertex().id() == destinationId){
+            return false;
+        }
+
         return true;
     }
 
-    public Couple[] getState(){
+    Couple[] getState(){
         return pq.getCouples();
     }
 
@@ -70,5 +80,18 @@ public class Dijkstra {
                 pq.update(couples[s.to().id()]);
             }
         });
+    }
+
+    static void printPath(Couple[] path,int sourceId ,int destinationId){
+        LinkedList<Integer> l = new LinkedList<>();
+        do{
+            var curr = path[destinationId];
+            l.addFirst(curr.getVertex().id());
+            System.out.println();
+            destinationId = curr.getPredecessor().id();
+        }while(destinationId != sourceId);
+        l.addFirst(sourceId);
+
+        System.out.println(l);
     }
 }

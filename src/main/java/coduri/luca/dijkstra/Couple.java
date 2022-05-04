@@ -2,11 +2,11 @@ package coduri.luca.dijkstra;
 
 import coduri.luca.graph.VertexImpl;
 
-class Couple implements Comparable<Couple> {
+public class Couple implements Comparable<Couple> {
     static final long INFINITY = Long.MAX_VALUE;
     private long weight;
     private VertexImpl predecessor;
-    private VertexImpl vertex;
+    private final VertexImpl vertex;
     private boolean completed;
 
     Couple(VertexImpl vertex) {
@@ -16,11 +16,11 @@ class Couple implements Comparable<Couple> {
         completed = false;
     }
 
-    long getWeight() {
+    public long getWeight() {
         return weight;
     }
 
-    VertexImpl getPredecessor() {
+    public VertexImpl getPredecessor() {
         return predecessor;
     }
 
@@ -30,10 +30,6 @@ class Couple implements Comparable<Couple> {
 
     void setWeight(long weight) {
         this.weight = weight;
-    }
-
-    void addWeight(int weight){
-        this.weight += weight;
     }
 
     public VertexImpl getVertex() {
@@ -53,7 +49,7 @@ class Couple implements Comparable<Couple> {
         return completed;
     }
 
-    public void setCompleted(boolean completed) {
+    void setCompleted(boolean completed) {
         this.completed = completed;
     }
 

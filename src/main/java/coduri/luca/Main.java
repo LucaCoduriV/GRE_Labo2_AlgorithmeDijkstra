@@ -31,11 +31,11 @@ public class Main {
         var graph = new CartesianGraphReader<>(
                 new VertexFactory(),
                 new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()),
-                DATA_FOLDER + "R15_1.txt"
+                DATA_FOLDER + "R10000_1.txt"
         ).graph();
 
-//        Dijkstra dijkstra = new Dijkstra(graph, 0);
-//
+        Dijkstra dijkstra = new Dijkstra(graph, 0,2);
+
 //        for (int i = 0; i < graph.getNVertices(); i++) {
 //            for (SimpleWeightedEdge<VertexImpl> s: graph.getSuccessorList(i)) {
 //
@@ -43,10 +43,11 @@ public class Main {
 //            }
 //        }
 
-        var test = new BiDijkstra(graph, 0, 14);
+        //var test = new BiDijkstra(graph, 0, 14);
 
 
-        //System.out.println(Arrays.toString(dijkstra.resolve()));
+        dijkstra.resolve();
 
     }
+
 }

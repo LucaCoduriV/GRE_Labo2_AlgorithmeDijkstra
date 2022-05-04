@@ -4,6 +4,7 @@
  */
 package coduri.luca;
 
+import coduri.luca.dijkstra.BiDijkstra;
 import coduri.luca.dijkstra.Dijkstra;
 import coduri.luca.graph.EdgeWeighterImpl;
 import coduri.luca.graph.VertexFactory;
@@ -14,6 +15,7 @@ import graph.core.impl.SimpleWeightedEdgeFactory;
 import graph.reader.CartesianGraphReader;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -27,18 +29,24 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         var graph = new CartesianGraphReader<>(
-                new VertexFactory()                                         /* TODO: Fournir une fabrique de sommets (il
-                                                                            s'agit d'une interface fonctionnelle) */,
-                new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()      /* TODO: Fournir une fonction de pondération
-                                                                            renvoyant la distance euclidienne (arrondie
-                                                                            à l'entier le plus proche) entre l'extrémité
-                                                                            initiale et l'extrémité finale de l'arête */),
-                DATA_FOLDER + "R15_1.txt"                                   /* TODO: Chemin des fichiers */
+                new VertexFactory(),
+                new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()),
+                DATA_FOLDER + "R15_1.txt"
         ).graph();
 
-        Dijkstra dijkstra = new Dijkstra(graph);
+//        Dijkstra dijkstra = new Dijkstra(graph, 0);
+//
+//        for (int i = 0; i < graph.getNVertices(); i++) {
+//            for (SimpleWeightedEdge<VertexImpl> s: graph.getSuccessorList(i)) {
+//
+//                System.out.println(s.from().id() + " " + s.to().id() + " " + s.weight());
+//            }
+//        }
 
-        dijkstra.resolve();
+        var test = new BiDijkstra(graph, 0, 14);
+
+
+        //System.out.println(Arrays.toString(dijkstra.resolve()));
 
     }
 }

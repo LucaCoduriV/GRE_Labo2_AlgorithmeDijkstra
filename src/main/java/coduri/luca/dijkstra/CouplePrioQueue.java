@@ -4,10 +4,10 @@ package coduri.luca.dijkstra;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-class CustomPrioQueue extends PriorityQueue<Couple>{
+class CouplePrioQueue extends PriorityQueue<Couple>{
     private final Couple[] couples;
 
-    CustomPrioQueue(Couple[] couples) {
+    CouplePrioQueue(Couple[] couples) {
         super(Arrays.asList(couples));
         this.couples = Arrays.copyOf(couples, couples.length);
     }
@@ -33,5 +33,10 @@ class CustomPrioQueue extends PriorityQueue<Couple>{
 
     public Couple[] getCouples() {
         return couples;
+    }
+
+    public void update(Couple s){
+        remove(s);
+        add(s);
     }
 }

@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="WIP">
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/PathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/PathTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,20 +65,7 @@
       <recent name="coduri.luca.dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DijkstraBidirectionalTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.Main" />
-      <module name="GRE_Labo2_AlgorithmeDijkstra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="coduri.luca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra">
     <configuration name="DijkstraBidirectionalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
@@ -94,22 +77,6 @@
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
       <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraBidirectionalTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DijkstraBidirectionalTest.resolve10000_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GRE_Labo2_AlgorithmeDijkstra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="coduri.luca.dijkstra.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraBidirectionalTest" />
-      <option name="METHOD_NAME" value="resolve10000_1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DijkstraSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PathTest.joinPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
@@ -139,19 +106,50 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraSimpleTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.PathTest" />
+      <option name="METHOD_NAME" value="joinPath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PathTest.joinPath2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GRE_Labo2_AlgorithmeDijkstra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coduri.luca.dijkstra.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.PathTest" />
+      <option name="METHOD_NAME" value="joinPath2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GRE_Labo2_AlgorithmeDijkstra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coduri.luca.dijkstra.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" />
+        <item itemvalue="JUnit.PathTest.joinPath2" />
+        <item itemvalue="JUnit.PathTest.joinPath" />
         <item itemvalue="JUnit.DijkstraBidirectionalTest" />
         <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve15" />
-        <item itemvalue="JUnit.DijkstraSimpleTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve10000_1" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +164,7 @@
       <workItem from="1651498077383" duration="8750000" />
       <workItem from="1651519691040" duration="119000" />
       <workItem from="1651519828253" duration="16360000" />
-      <workItem from="1651690710031" duration="18325000" />
+      <workItem from="1651690710031" duration="18643000" />
     </task>
     <task id="LOCAL-00001" summary="WIP">
       <created>1651705670067</created>

@@ -4,6 +4,8 @@
  */
 package coduri.luca;
 
+import coduri.luca.dijkstra.Dijkstra;
+import coduri.luca.dijkstra.DijkstraBidirectional;
 import coduri.luca.dijkstra.DijkstraSimple;
 import coduri.luca.graph.EdgeWeighterImpl;
 import coduri.luca.graph.VertexFactory;
@@ -12,7 +14,9 @@ import graph.core.impl.SimpleWeightedEdge;
 import graph.core.impl.SimpleWeightedEdgeFactory;
 import graph.reader.CartesianGraphReader;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class Main {
     /*
@@ -30,6 +34,10 @@ public class Main {
 
         DijkstraSimple dijkstra = new DijkstraSimple(graph, 0,10);
 
+        PrintStream out = new PrintStream(
+                new FileOutputStream("output.txt"));
+        System.setOut(out);
+
         for (int i = 0; i < graph.getNVertices(); i++) {
             for (SimpleWeightedEdge<VertexImpl> s: graph.getSuccessorList(i)) {
 
@@ -37,7 +45,10 @@ public class Main {
             }
         }
 
-        //var test = new BiDijkstra(graph, 0, 14);
+
+
+        DijkstraSimple test = new DijkstraSimple(graph, 0,10);
+        DijkstraBidirectional test2 = new DijkstraBidirectional(graph, 0,10);
 
 
         //dijkstra.resolve();

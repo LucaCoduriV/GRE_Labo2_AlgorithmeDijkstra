@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="WIP">
+    <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/PathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/PathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,29 +37,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "coduri.vitor@gmail.com",
-    "ACTIVE_CLOUD_PROJECT_ID": "cldlabo3",
-    "ACTIVE_CLOUD_PROJECT_NAME": "cldlabo3",
-    "ACTIVE_CLOUD_PROJECT_NUMBER": "458729523391",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220504_0012",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "extract.method.default.visibility": "private",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "B:/Users/lucac/Documents/GitHub/GRE_Labo2_AlgorithmeDijkstra",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;coduri.vitor@gmail.com&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;cldlabo3&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;cldlabo3&quot;,
+    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;458729523391&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20220504_0012&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;B:/Users/lucac/Documents/GitHub/GRE_Labo2_AlgorithmeDijkstra&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -66,17 +69,15 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra">
-    <configuration name="DijkstraBidirectionalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.Main" />
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="coduri.luca.dijkstra.*" />
+          <option name="PATTERN" value="coduri.luca.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraBidirectionalTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathTest.joinPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DijkstraSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +107,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.PathTest" />
-      <option name="METHOD_NAME" value="joinPath" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraSimpleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathTest.joinPath2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DijkstraSimpleTest.resolve15" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +122,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.PathTest" />
-      <option name="METHOD_NAME" value="joinPath2" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraSimpleTest" />
+      <option name="METHOD_NAME" value="resolve15" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" />
-        <item itemvalue="JUnit.PathTest.joinPath2" />
-        <item itemvalue="JUnit.PathTest.joinPath" />
-        <item itemvalue="JUnit.DijkstraBidirectionalTest" />
+        <item itemvalue="JUnit.DijkstraSimpleTest" />
+        <item itemvalue="JUnit.DijkstraSimpleTest.resolve15" />
         <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve15" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

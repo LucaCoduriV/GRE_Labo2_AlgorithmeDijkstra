@@ -17,12 +17,9 @@ public class DijkstraSimple implements Dijkstra {
     /** les couples poids et prédécesseur **/
     private final CouplePrioQueue pq;
     private final int destinationId;
-    private final int sourceId;
-
 
     public DijkstraSimple(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback) {
         this.destinationId = destinationId;
-        this.sourceId = sourceId;
         this.graph = graph;
         final VertexImpl[] vertices = graph.getVertices().toArray(VertexImpl[]::new);
         final Couple[] couples = Arrays.stream(vertices).map(Couple::new).toArray(Couple[]::new);
@@ -81,14 +78,13 @@ public class DijkstraSimple implements Dijkstra {
     }
 
     public Path getPath(){
-        var path = pq.getCouples();
+        var couples = pq.getCouples();
         LinkedList<Integer> l = new LinkedList<>();
-        long totalWeight = 0;
+        long totalWeight = couples[destinationId].getWeight();
         int nextId = destinationId;
         while(true){
-            var curr = path[nextId];
+            var curr = couples[nextId];
             l.addFirst(curr.getVertex().id());
-            totalWeight += curr.getWeight();
             if(curr.getPredecessor() == null) break;
             nextId = curr.getPredecessor().id();
         }
@@ -96,7 +92,7 @@ public class DijkstraSimple implements Dijkstra {
         return new Path(totalWeight, l.stream().mapToInt(i -> i).toArray());
     }
 
-    public Couple getLastCoupleRemoved() {
+    Couple getLastCoupleRemoved() {
         return lastCoupleRemoved;
     }
 }

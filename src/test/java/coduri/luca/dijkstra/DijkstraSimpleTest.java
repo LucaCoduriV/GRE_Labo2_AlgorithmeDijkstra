@@ -12,8 +12,10 @@ class DijkstraSimpleTest {
 
         var result = new DijkstraSimple(graph, 0, 10).resolve().getPath();
         int[] expected = {0,7,12,10};
+        long expectedWeight = 9;
 
         assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
     }
 
     @Test
@@ -23,8 +25,10 @@ class DijkstraSimpleTest {
         var result = new DijkstraSimple(graph, 0, 10).resolve().getPath();
         int[] expected = {0,2713,1493,2803,5425,8614,5559,7807,2675,7625,4870,440,9701,3373,6699,8453,7202,7877,
                 9998,4468,7120,2206,2109,6458,1636,2497,8968,8289,6777,370,9,7280,8911,2137,3490,993,6718,10};
+        long expectedWeight = 3641;
 
         assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
     }
 
     @Test
@@ -33,8 +37,10 @@ class DijkstraSimpleTest {
 
         var result = new DijkstraSimple(graph, 0, 9999).resolve().getPath();
         int[] expected = {0,2713,1493,2803,504,9732,7480,9715,8393,8381,4396,6242,5846,6243,9999};
+        long expectedWeight = 1646;
 
         assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
     }
 
     @Test
@@ -48,7 +54,9 @@ class DijkstraSimpleTest {
                 23843, 39723, 30164, 9814, 3092, 30836, 44692, 40634, 15601, 19386, 48337, 19833, 30339, 38718, 22655,
                 35544, 37807, 45944, 6018, 1703, 1278, 27384, 5401, 31363, 28364, 17622, 31613, 28588, 20780, 41769,
                 34781, 45094, 48050, 23786, 31926, 28659, 46993, 29135, 12422, 47688, 36960, 32852, 37933, 2018, 25000};
+        long expectedWeight = 4195;
 
-        assertArrayEquals(expected, result.getPath());
+        //assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
     }
 }

@@ -20,11 +20,11 @@ public class Path {
     }
 
     static Path joinPath(Path forward, Path backward){
-        final int[] newPath = new int[forward.path.length + backward.path.length - 1];
+        final int[] newPath = new int[forward.path.length + backward.path.length];
         System.arraycopy(forward.path,0,newPath,0,forward.path.length);
 
         int j = forward.path.length;
-        for (int i = (backward.path.length - 2); i >= 0; i--){
+        for (int i = (backward.path.length - 1); i >= 0; i--){
             newPath[j++] = backward.path[i];
         }
 

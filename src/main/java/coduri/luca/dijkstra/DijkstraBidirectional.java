@@ -35,9 +35,12 @@ public class DijkstraBidirectional implements Dijkstra{
 
             graph.getSuccessorList(lastForward).forEach(v ->{
                 if(backward.getState()[v.to().id()].isCompleted()){
-                    final Path newPathF = getPath(forward.getState(), v.to().id());
-                    final Path newPathB = getPath(backward.getState(), v.to().id());
+                    final Path newPathF = getPath(forward.getState(), v.to().id(), false);
+                    final Path newPathB = getPath(backward.getState(), v.to().id(), true);
+                    System.out.println(newPathF);
+                    System.out.println(newPathB);
                     final Path newPath = Path.joinPath(newPathF, newPathB);
+                    System.out.println(newPath);
                     bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
                 }
 
@@ -54,9 +57,12 @@ public class DijkstraBidirectional implements Dijkstra{
 
             graph.getSuccessorList(lastBackward).forEach(v ->{
                 if(forward.getState()[v.to().id()].isCompleted()){
-                    final Path newPathF = getPath(forward.getState(), v.to().id());
-                    final Path newPathB = getPath(backward.getState(), v.to().id());
+                    final Path newPathF = getPath(forward.getState(), v.to().id(), false);
+                    final Path newPathB = getPath(backward.getState(), v.to().id(), true);
+                    System.out.println(newPathF);
+                    System.out.println(newPathB);
                     final Path newPath = Path.joinPath(newPathF, newPathB);
+                    System.out.println(newPath);
                     bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
                 }
             });
@@ -70,27 +76,20 @@ public class DijkstraBidirectional implements Dijkstra{
         return this;
     }
 
-    private void onPathFound(int intermediateId){
-        System.out.println("Found path");
-        bestPath =
-        getPath(forward.getState(), intermediateId);
-        getPath(backward.getState(), intermediateId);
-
-    }
-
     @Override
     public Path getPath() {
         return bestPath;
     }
 
-    private static Path getPath(Couple[] path, int destinationId){
+    private static Path getPath(Couple[] couples, int destinationId, boolean removeLast){
         LinkedList<Integer> l = new LinkedList<>();
-        long totalWeight = 0;
-        int nextId = destinationId;
+
+        long totalWeight = couples[destinationId].getWeight();
+        int nextId = removeLast ? couples[destinationId].getPredecessor().id() : destinationId;
+
         while(true){
-            var curr = path[nextId];
+            var curr = couples[nextId];
             l.addFirst(curr.getVertex().id());
-            totalWeight += curr.getWeight();
             if(curr.getPredecessor() == null) break;
             nextId = curr.getPredecessor().id();
         }

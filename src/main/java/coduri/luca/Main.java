@@ -25,7 +25,7 @@ public class Main {
         var graph = new CartesianGraphReader<>(
                 new VertexFactory(),
                 new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()),
-                DATA_FOLDER + "R50000_1.txt"
+                DATA_FOLDER + "R15_1.txt"
         ).graph();
 
         DijkstraSimple dijkstra = new DijkstraSimple(graph, 0,10);

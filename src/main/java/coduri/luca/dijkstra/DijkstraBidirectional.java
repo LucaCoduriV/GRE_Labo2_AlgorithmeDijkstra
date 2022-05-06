@@ -9,71 +9,59 @@ import java.util.LinkedList;
 public class DijkstraBidirectional implements Dijkstra{
     private DijkstraSimple forward;
     private DijkstraSimple backward;
-    private Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph;
+    private final Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph;
     private final int sourceId;
     private final int destinationId;
 
+    private final DijkstraCallback callback;
+
     private Path bestPath;
-    public DijkstraBidirectional(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId){
+    public DijkstraBidirectional(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback){
+        this.callback = callback;
         this.graph = graph;
         this.sourceId = sourceId;
         this.destinationId = destinationId;
         this.bestPath = new Path(Couple.INFINITY, new int[0]);
     }
 
-    public Dijkstra resolve(){
-        this.forward = new DijkstraSimple(graph, sourceId, destinationId);
-        this.backward = new DijkstraSimple(graph, destinationId, destinationId);
+    public DijkstraBidirectional(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId){
+        this(graph, sourceId, destinationId, null);
+    }
 
-        int lastForward;
-        int lastBackward = -1;
-        Path result = null;
+    public Dijkstra resolve(){
+        this.forward = new DijkstraSimple(graph, sourceId, destinationId, callback);
+        this.backward = new DijkstraSimple(graph, destinationId, destinationId, callback);
+
+        int[] lastForward = {-1};
+        int[] lastBackward = {-1};
 
         while(true){
-            forward.nextIt();
-            lastForward = forward.getLastCoupleRemoved().getVertex().id();
-
-            graph.getSuccessorList(lastForward).forEach(v ->{
-                if(backward.getState()[v.to().id()].isCompleted()){
-                    final Path newPathF = getPath(forward.getState(), v.to().id(), false);
-                    final Path newPathB = getPath(backward.getState(), v.to().id(), true);
-                    System.out.println(newPathF);
-                    System.out.println(newPathB);
-                    final Path newPath = Path.joinPath(newPathF, newPathB);
-                    System.out.println(newPath);
-                    bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
-                }
-
-
-            });
-
-            if(backward.getPrioQueue().get(lastForward).isCompleted()){
-                break;
-            }
-
-
-            backward.nextIt();
-            lastBackward = backward.getLastCoupleRemoved().getVertex().id();
-
-            graph.getSuccessorList(lastBackward).forEach(v ->{
-                if(forward.getState()[v.to().id()].isCompleted()){
-                    final Path newPathF = getPath(forward.getState(), v.to().id(), false);
-                    final Path newPathB = getPath(backward.getState(), v.to().id(), true);
-                    System.out.println(newPathF);
-                    System.out.println(newPathB);
-                    final Path newPath = Path.joinPath(newPathF, newPathB);
-                    System.out.println(newPath);
-                    bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
-                }
-            });
-
-            if(forward.getPrioQueue().get(lastBackward).isCompleted()){
-                break;
-            }
-
+            if (adHoc(lastForward, forward, backward)) break;
+            if (adHoc(lastBackward, backward, forward)) break;
         }
 
         return this;
+    }
+
+    private boolean adHoc(int[] lastPulledOut, DijkstraSimple dijkstra1, DijkstraSimple dijkstra2) {
+        dijkstra1.nextIt();
+        lastPulledOut[0] = dijkstra1.getLastCoupleRemoved().getVertex().id();
+
+        graph.getSuccessorList(lastPulledOut[0]).forEach(v ->{
+            if(dijkstra2.getState()[v.to().id()].isCompleted()){
+                final Path newPathF = getPath(forward.getState(), v.to().id(), false);
+                final Path newPathB = getPath(backward.getState(), v.to().id(), true);
+                final Path newPath = Path.joinPath(newPathF, newPathB);
+                bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
+            }
+
+
+        });
+
+        if(dijkstra2.getPrioQueue().get(lastPulledOut[0]).isCompleted()){
+            return true;
+        }
+        return false;
     }
 
     @Override

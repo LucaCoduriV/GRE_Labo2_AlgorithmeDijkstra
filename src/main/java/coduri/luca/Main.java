@@ -29,13 +29,13 @@ public class Main {
         var graph = new CartesianGraphReader<>(
                 new VertexFactory(),
                 new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()),
-                DATA_FOLDER + "R15_1.txt"
+                DATA_FOLDER + "R50000_1.txt"
         ).graph();
 
         DijkstraSimple dijkstra = new DijkstraSimple(graph, 0,10);
 
         PrintStream out = new PrintStream(
-                new FileOutputStream("output.txt"));
+                new FileOutputStream("data/outputR50000.txt"));
         System.setOut(out);
 
         for (int i = 0; i < graph.getNVertices(); i++) {
@@ -44,15 +44,6 @@ public class Main {
                 System.out.println(s.from().id() + " " + s.to().id() + " " + s.weight());
             }
         }
-
-
-
-        DijkstraSimple test = new DijkstraSimple(graph, 0,10);
-        DijkstraBidirectional test2 = new DijkstraBidirectional(graph, 0,10);
-
-
-        //dijkstra.resolve();
-
     }
 
 }

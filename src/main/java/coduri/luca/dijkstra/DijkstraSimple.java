@@ -52,13 +52,13 @@ public class DijkstraSimple implements Dijkstra {
         visitSuccessors(lastCoupleRemoved);
 
         if(callback != null)
-            callback.onIterationComplete(pq, lastCoupleRemoved);
+            callback.onIterationComplete(pq.getCouples(), lastCoupleRemoved);
 
         return lastCoupleRemoved.getVertex().id() != destinationId;
     }
 
     Couple[] getState(){
-        return pq.getCouples();
+        return pq.couples();
     }
     CouplePrioQueue getPrioQueue(){
         return pq;
@@ -66,7 +66,7 @@ public class DijkstraSimple implements Dijkstra {
 
     private void visitSuccessors(Couple couple){
         var successors = graph.getSuccessorList(couple.getVertex().id());
-        final Couple[] couples = pq.getCouples();
+        final Couple[] couples = pq.couples();
         successors.forEach(s ->{
             if(couples[s.to().id()].getWeight() > couples[couple.getVertex().id()].getWeight() + s.weight()){
                 couples[s.to().id()].setWeight(couples[couple.getVertex().id()].getWeight() + s.weight());
@@ -78,7 +78,7 @@ public class DijkstraSimple implements Dijkstra {
     }
 
     public Path getPath(){
-        var couples = pq.getCouples();
+        var couples = pq.couples();
         LinkedList<Integer> l = new LinkedList<>();
         long totalWeight = couples[destinationId].getWeight();
         int nextId = destinationId;

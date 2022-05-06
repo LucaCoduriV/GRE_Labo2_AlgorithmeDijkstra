@@ -31,8 +31,12 @@ class CouplePrioQueue extends PriorityQueue<Couple>{
         return couples[index];
     }
 
-    public Couple[] getCouples() {
+    Couple[] couples() {
         return couples;
+    }
+
+    public Couple[] getCouples() {
+        return Arrays.copyOf(couples, couples.length);
     }
 
     public void update(Couple s){

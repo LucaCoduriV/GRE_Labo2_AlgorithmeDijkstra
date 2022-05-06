@@ -1,4 +1,4 @@
-package coduri.luca.dijkstra;
+package coduri.luca;
 
 import coduri.luca.graph.EdgeWeighterImpl;
 import coduri.luca.graph.VertexFactory;
@@ -13,9 +13,9 @@ import java.io.IOException;
 public class GraphGenerator {
 
     private static final String DATA_FOLDER = "data/";
-    final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph15 = generateGraph("R15_1.txt");
-    final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph10000 = generateGraph("R10000_1.txt");
-    final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph50000 = generateGraph("R50000_1.txt");
+    public final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph15 = generateGraph("R15_1.txt");
+    public final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph10000 = generateGraph("R10000_1.txt");
+    public final static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph50000 = generateGraph("R50000_1.txt");
 
     private static Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> generateGraph(String filename){
         try {

@@ -3,6 +3,8 @@ package coduri.luca.dijkstra;
 import coduri.luca.GraphGenerator;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DijkstraSimpleTest {
@@ -66,7 +68,8 @@ class DijkstraSimpleTest {
         var result = new DijkstraSimple(graph, 0, 10).resolve().getPath();
         int[] expected = {0,2713,9440,7201,41940,7663,30398,1294,10458,47566,19913,38032,6676,20900,24255,42828,38546,21491,33102,14158,38882,45742,10577,25178,24363,28098,45762,46305,11457,22810,9550,24322,49818,4812,39166,46166,28129,40915,46511,24838,22177,19780,28179,47838,49316,660,38599,16034,2687,6542,40955,45119,30181,43654,4106,34242,36476,16638,18598,20289,32076,7275,1368,10633,12565,44474,44633,10327,10};
         long expectedWeight = 3350;
-
+        System.out.println();
+        System.out.println(Arrays.toString(expected));
         assertArrayEquals(expected, result.getPath());
         assertEquals(expectedWeight, result.getTotalWeight());
     }

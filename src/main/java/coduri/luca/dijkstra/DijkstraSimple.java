@@ -17,9 +17,11 @@ public class DijkstraSimple implements Dijkstra {
     /** les couples poids et prédécesseur **/
     private final CouplePrioQueue pq;
     private final int destinationId;
+    private final int sourceId;
 
     public DijkstraSimple(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback) {
         this.destinationId = destinationId;
+        this.sourceId = sourceId;
         this.graph = graph;
         final VertexImpl[] vertices = graph.getVertices().toArray(VertexImpl[]::new);
         final Couple[] couples = Arrays.stream(vertices).map(Couple::new).toArray(Couple[]::new);
@@ -46,7 +48,7 @@ public class DijkstraSimple implements Dijkstra {
         }
 
         if(lastCoupleRemoved.getWeight() == Couple.INFINITY){
-            throw new IllegalArgumentException(CONNEXE_CIRCUIT_ERROR);
+            throw new IllegalArgumentException(CONNEXE_CIRCUIT_ERROR + ":" + sourceId + " "+ destinationId);
         }
 
         visitSuccessors(lastCoupleRemoved);
@@ -68,17 +70,17 @@ public class DijkstraSimple implements Dijkstra {
         var successors = graph.getSuccessorList(couple.getVertex().id());
         final Couple[] couples = pq.couples();
         successors.forEach(s ->{
-            if(couples[s.to().id()].getWeight() > couples[couple.getVertex().id()].getWeight() + s.weight()){
-                couples[s.to().id()].setWeight(couples[couple.getVertex().id()].getWeight() + s.weight());
+            long newWeight = couples[couple.getVertex().id()].getWeight() + s.weight();
+            if(couples[s.to().id()].getWeight() > newWeight){
+                couples[s.to().id()].setWeight(newWeight);
                 couples[s.to().id()].setPredecessor(couple.getVertex());
-
                 pq.update(couples[s.to().id()]);
             }
         });
     }
 
     public Path getPath(){
-        var couples = pq.couples();
+        Couple[] couples = pq.couples();
         LinkedList<Integer> l = new LinkedList<>();
         long totalWeight = couples[destinationId].getWeight();
         int nextId = destinationId;

@@ -48,20 +48,18 @@ public class DijkstraBidirectional implements Dijkstra{
         lastPulledOut[0] = dijkstra1.getLastCoupleRemoved().getVertex().id();
 
         graph.getSuccessorList(lastPulledOut[0]).forEach(v ->{
-            if(dijkstra2.getState()[v.to().id()].isCompleted()){
+            final long weight = forward.getState()[v.to().id()].getWeight() + backward.getState()[v.to().id()].getWeight();
+
+            if(dijkstra2.getState()[v.to().id()].isCompleted() && weight < bestPath.getTotalWeight()){
                 final Path newPathF = getPath(forward.getState(), v.to().id(), false);
                 final Path newPathB = getPath(backward.getState(), v.to().id(), true);
-                final Path newPath = Path.joinPath(newPathF, newPathB);
-                bestPath = newPath.getTotalWeight() < bestPath.getTotalWeight() ? newPath : bestPath;
+                bestPath = Path.joinPath(newPathF, newPathB);
             }
 
 
         });
 
-        if(dijkstra2.getPrioQueue().get(lastPulledOut[0]).isCompleted()){
-            return true;
-        }
-        return false;
+        return dijkstra2.getPrioQueue().get(lastPulledOut[0]).isCompleted();
     }
 
     @Override

@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="Added Monitor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/performance/DijkstraMonitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/performance/DijkstraMonitorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+    <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="factorisation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARN_PW4.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraBidirectionalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/DijkstraSimpleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/coduri/luca/dijkstra/GraphGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/coduri/luca/GraphGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220506_0001",
+    "com.google.cloudcode.ide_session_index": "20220507_0000",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
@@ -80,7 +72,7 @@
       <recent name="coduri.luca.dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in GRE_Labo2_AlgorithmeDijkstra">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coduri.luca.Main" />
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
@@ -98,22 +90,6 @@
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DijkstraBidirectionalTest.resolve50000_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GRE_Labo2_AlgorithmeDijkstra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="coduri.luca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
-      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraBidirectionalTest" />
-      <option name="METHOD_NAME" value="resolve50000_2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,6 +125,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DijkstraSimpleTest.resolve50000_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GRE_Labo2_AlgorithmeDijkstra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coduri.luca.dijkstra.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="coduri.luca.dijkstra" />
+      <option name="MAIN_CLASS_NAME" value="coduri.luca.dijkstra.DijkstraSimpleTest" />
+      <option name="METHOD_NAME" value="resolve50000_2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <extension name="coverage">
@@ -169,15 +161,15 @@
       <item itemvalue="JUnit.DijkstraMonitorTest" />
       <item itemvalue="JUnit.DijkstraMonitorTest.getIterationCountDijkstraSimple" />
       <item itemvalue="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" />
-      <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve50000_2" />
+      <item itemvalue="JUnit.DijkstraSimpleTest.resolve50000_2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DijkstraSimpleTest.resolve50000_2" />
         <item itemvalue="JUnit.DijkstraMonitorTest" />
         <item itemvalue="JUnit.DijkstraMonitorTest.getIterationCountDijkstraSimple" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.coduri.luca.dijkstra in GRE_Labo2_AlgorithmeDijkstra" />
-        <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve50000_2" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +185,7 @@
       <workItem from="1651519691040" duration="119000" />
       <workItem from="1651519828253" duration="16360000" />
       <workItem from="1651690710031" duration="18643000" />
-      <workItem from="1651828733584" duration="4233000" />
+      <workItem from="1651828733584" duration="15264000" />
     </task>
     <task id="LOCAL-00001" summary="WIP">
       <created>1651705670067</created>
@@ -202,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651705670067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="factorisation">
+      <created>1651833618778</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651833618778</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +221,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WIP" />
     <MESSAGE value="Added Monitor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Monitor" />
+    <MESSAGE value="factorisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="factorisation" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

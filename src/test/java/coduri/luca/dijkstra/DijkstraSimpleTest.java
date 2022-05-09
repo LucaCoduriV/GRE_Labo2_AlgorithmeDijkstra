@@ -46,6 +46,17 @@ class DijkstraSimpleTest {
     }
 
     @Test
+    void resolve10000_3() {
+        var graph = GraphGenerator.graph10000;
+        var result = new DijkstraSimple(graph, 1664, 8920).resolve().getPath();
+        int[] expected = {1664,9250,8920};
+        long expectedWeight = 146;
+
+        assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
+    }
+
+    @Test
     void resolve50000_1() {
         var graph = GraphGenerator.graph50000;
 

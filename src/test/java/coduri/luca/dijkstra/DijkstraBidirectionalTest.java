@@ -2,6 +2,9 @@ package coduri.luca.dijkstra;
 
 import coduri.luca.GraphGenerator;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DijkstraBidirectionalTest {
@@ -41,6 +44,16 @@ class DijkstraBidirectionalTest {
     }
 
     @Test
+    void resolve10000_3() {
+        var graph = GraphGenerator.graph10000;
+        var result = new DijkstraBidirectional(graph, 1664, 8920).resolve().getPath();
+        int[] expected = {1664,9250,8920};
+        long expectedWeight = 146;
+
+        assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
+    }
+    @Test
     void resolve50000_1() {
         var graph = GraphGenerator.graph50000;
         var result = new DijkstraBidirectional(graph, 0, 25000).resolve().getPath();
@@ -51,7 +64,7 @@ class DijkstraBidirectionalTest {
                 28364,17622,31613,28588,20780,41769,34781,45094,48050,23786,31926,28659,46993,29135,12422,47688,36960,
                 32852,37933,2018,25000};
         long expectedWeight = 4195;
-
+        System.out.println(Arrays.toString(result.getPath()));
         assertArrayEquals(expected, result.getPath());
         assertEquals(expectedWeight, result.getTotalWeight());
     }
@@ -80,4 +93,16 @@ class DijkstraBidirectionalTest {
         assertArrayEquals(expected, result.getPath());
         assertEquals(expectedWeight, result.getTotalWeight());
     }
+
+    @Test
+    void resolve10000_4() {
+        var graph = GraphGenerator.graph50000;
+        var result = new DijkstraBidirectional(graph, 1664, 8920).resolve().getPath();
+        int[] expected = {1664,9250,8920};
+        long expectedWeight = 146;
+
+        assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getTotalWeight());
+    }
+
 }

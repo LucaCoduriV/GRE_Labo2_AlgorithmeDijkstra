@@ -11,18 +11,18 @@ class DijkstraMonitorTest {
 
     @Test
     void getIterationCountDijkstraSimple() {
-        var graph = GraphGenerator.graph50000;
+        var graph = GraphGenerator.graph10000;
         var monitor = new DijkstraMonitor();
-        new DijkstraSimple(graph, 0, 10, monitor).resolve();
+        new DijkstraSimple(graph, 0, 100, monitor).resolve();
         System.out.println(monitor.getIterationCount());
         assertNotEquals(0,monitor.getIterationCount());
     }
 
     @Test
     void getIterationCountDijkstraBi() {
-        var graph = GraphGenerator.graph50000;
+        var graph = GraphGenerator.graph10000;
         var monitor = new DijkstraMonitor();
-        new DijkstraBidirectional(graph, 0, 10, monitor).resolve();
+        new DijkstraBidirectional(graph, 0, 100, monitor).resolve();
         System.out.println(monitor.getIterationCount());
         assertNotEquals(0,monitor.getIterationCount());
     }

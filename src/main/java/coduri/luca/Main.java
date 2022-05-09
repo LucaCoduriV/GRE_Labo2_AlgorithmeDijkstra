@@ -19,6 +19,8 @@ import graph.reader.CartesianGraphReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Main {
@@ -28,6 +30,9 @@ public class Main {
      */
     private static final String DATA_FOLDER = "data/";
     private static final int NB_VERTICES = 10000;
+    private static final List<Long> itSimple = new ArrayList<>();
+    private static final List<Long> itBidirectional = new ArrayList<>();
+
 
     public static void main(String[] args) throws IOException {
         var graph = new CartesianGraphReader<>(
@@ -35,6 +40,9 @@ public class Main {
                 new SimpleWeightedEdgeFactory<>(new EdgeWeighterImpl()),
                 DATA_FOLDER + "R" + NB_VERTICES + "_1.txt"
         ).graph();
+
+        //PrintStream file = new PrintStream(new FileOutputStream("data/output.txt"));
+
 
         Random rdm = new Random(20220404);
 
@@ -45,19 +53,30 @@ public class Main {
 
             var monitor = new DijkstraMonitor();
             var monitor2 = new DijkstraMonitor();
-            test(new DijkstraSimple(graph, source,target, monitor), monitor);
-            test(new DijkstraBidirectional(graph, source,target, monitor2), monitor2);
+            test(new DijkstraSimple(graph, source,target, monitor), monitor, itSimple);
+            test(new DijkstraBidirectional(graph, source,target, monitor2), monitor2, itBidirectional);
+            System.out.println(source + " " + target);
         }
 
+        PrintStream out = new PrintStream(new FileOutputStream("data/results.txt"));
+        out.println(itBidirectional);
+        out.println(itSimple);
+        out.println("Moyenne de l'algorithme simple: " + itSimple.stream().mapToDouble(a -> a).average().orElse(0));
+        out.println("Moyenne de l'algorithme bidirectional: " + itBidirectional.stream().mapToDouble(a -> a).average().orElse(0));
+        out.println("Min de l'algorithme simple: " + itSimple.stream().mapToDouble(a -> a).min().orElse(0));
+        out.println("Min de l'algorithme bidirectional: " + itBidirectional.stream().mapToDouble(a -> a).min().orElse(0));
+        out.println("Max de l'algorithme simple: " + itSimple.stream().mapToDouble(a -> a).max().orElse(0));
+        out.println("Max de l'algorithme bidirectional: " + itBidirectional.stream().mapToDouble(a -> a).max().orElse(0));
 
 
+
+        out.close();
     }
 
-    static void test(Dijkstra dijkstra, DijkstraMonitor monitor){
+    static void test(Dijkstra dijkstra, DijkstraMonitor monitor, List<Long> itList){
         try{
-            Path result = dijkstra.resolve().getPath();
-            System.out.println("Nombre d'itération = " + monitor.getIterationCount());
-            System.out.println("Distance: " + result.getTotalWeight());
+            dijkstra.resolve();
+            itList.add(monitor.getIterationCount());
         }catch(Exception e){
             System.out.println("Pas de chemin");
         }

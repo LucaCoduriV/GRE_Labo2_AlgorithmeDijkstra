@@ -68,6 +68,10 @@ public class DijkstraBidirectional implements Dijkstra{
     }
 
     private static Path getPath(Couple[] couples, int destinationId, boolean removeLast){
+        if(couples[destinationId].getPredecessor() == null){
+            return new Path(0, new int[0]);
+        }
+
         LinkedList<Integer> l = new LinkedList<>();
 
         long totalWeight = couples[destinationId].getWeight();

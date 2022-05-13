@@ -28,7 +28,7 @@ Pour avoir une meilleure idée et pouvoir plus facilement interpréter les donn�
 
 ## Mes résultats
 
-Voici un aperçu des 20 premières ligne de mes [résultats](results.md) :
+Voici un aperçu des 20 premières lignes de mes [résultats](results.md) :
 
 | n°   | source | destination | nb itérations simple | nb itérations bidir | temps simple (ms) | temps bidir (ms) |
 |------|--------|-------------|----------------------|---------------------|-------------------|------------------|

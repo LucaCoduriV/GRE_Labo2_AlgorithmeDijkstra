@@ -109,8 +109,8 @@ public class Main {
         result.insert(0, "Temps moyen bidirectionnel: " + moyenneTempsBidir / 1000000 + "ms\n\n");
         result.insert(0, "Nombre d'itération moyen simple: " + moyenneItSimple + "\n\n");
         result.insert(0, "Nombre d'itération moyen bidirectionnel: " + moyenneItBidir + "\n\n");
-        result.insert(0, "Nombre de fois que Bidirectionnel à moins d'itérations : " + nbItBidiSup + "\n\n");
-        result.insert(0, "Nombre de fois que bidirectionnel prend moins de temps : " + nbTempsBidiSup + "\n\n");
+        result.insert(0, "Nombre de fois que Bidirectionnel à moins d'itérations : " + nbItBidiSup + "/" + sources.size()+ "\n\n");
+        result.insert(0, "Nombre de fois que bidirectionnel prend moins de temps : " + nbTempsBidiSup + "/" + sources.size()+ "\n\n");
 
         return result.toString();
     }

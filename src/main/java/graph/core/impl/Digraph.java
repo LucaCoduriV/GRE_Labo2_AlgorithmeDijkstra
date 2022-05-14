@@ -159,7 +159,6 @@ public final class Digraph<V extends Vertex, E extends Edge<V>> {
    * @param vertex Vertex index.
    *
    * @return Successor list of given vertex.
-   * @throws ArrayIndexOutOfBoundsException
    */
   public List<E> getSuccessorList(final int vertex) {
     return successorLists.get(vertex);

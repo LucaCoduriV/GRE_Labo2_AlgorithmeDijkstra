@@ -8,9 +8,9 @@ Ce laboratoire nous permet de mieux comprendre le fonctionnement de l'algorithme
 ## Méthode d'analyse
 Pour pouvoir comparer les 2 variantes de Dijkstra il est nécessaire de récolter des données.
 Il nous est donc demandé de générer 1000 sommets source et target que l'on fourni à nos algorithmes.
-On récolte ensuite le nombre d'itérations par couple source-target ainsi que les sommets par les quel il faut passer avec leur distance.
-J'ai aussi récolté le temps qu'il faut pour exécuter les algorithmes même si ce n'était pas demandé.
-J'ai finalement rempli un tableau avec ces données qui contient ces informations :
+On récolte ensuite le nombre d'itérations par couple source-target, les sommets par lesquels il faut passer ainsi que la distance totale.
+J'ai également trouvé judicieux de calculer le temps de calcul de chaque algorithme, bien que cela n'était pas spécifié, dans une optique de comparaison des performances.
+J'ai finalement synthétisé ces données dans un tableau de résultats, dont vous trouverez un échantillon ci-dessous, contenant les informations suivantes :
 - sommet source
 - sommet destination
 - nombre d'itérations pour Dijkstra simple
@@ -19,12 +19,12 @@ J'ai finalement rempli un tableau avec ces données qui contient ces information
 - temps bidirectionnel en millisecond pour Dijkstra bidirectionnel
 
 Pour avoir une meilleure idée et pouvoir plus facilement interpréter les données, j'ai aussi calculé quelques statistiques :
-- Nombre de fois que bidirectionnel prend moins de temps
-- Nombre de fois que Bidirectionnel à moins d'itérations
-- Nombre d'itérations moyen bidirectionnel
-- Nombre d'itérations moyen simple
-- Temps moyen bidirectionnel
-- Temps moyen simple
+- Nombre de fois que le bidirectionnel prend moins de temps
+- Nombre de fois que le bidirectionnel à moins d'itérations
+- Nombre d'itérations moyen pour le bidirectionnel
+- Nombre d'itérations moyen pour le simple
+- Temps moyen pour le bidirectionnel
+- Temps moyen pour le simple
 
 ## Mes résultats
 
@@ -61,9 +61,9 @@ Voici un aperçu des 20 premières lignes de mes [résultats](results.md) :
 
 **Nombre de fois que Bidirectionnel à moins d'itérations : `998/1000`**
 
-**Nombre d'itération moyen bidirectionnel: `3366.34`**
+**Nombre d'itérations moyen bidirectionnel: `3366.34`**
 
-**Nombre d'itération moyen simple: `5008.845`**
+**Nombre d'itérations moyen simple: `5008.845`**
 
 **Temps moyen bidirectionnel: `17.407039388999998 ms`**
 

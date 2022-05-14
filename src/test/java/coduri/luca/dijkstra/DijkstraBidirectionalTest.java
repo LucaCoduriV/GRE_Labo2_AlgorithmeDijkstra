@@ -3,8 +3,6 @@ package coduri.luca.dijkstra;
 import coduri.luca.GraphGenerator;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class DijkstraBidirectionalTest {
@@ -59,7 +57,6 @@ class DijkstraBidirectionalTest {
         var result = new DijkstraBidirectional(graph, 0, 25000).resolve().getPath();
         int[] expected = {};
         long expectedWeight = 4195;
-        System.out.println(Arrays.toString(result.getPath()));
         //assertArrayEquals(expected, result.getPath());
         assertEquals(expectedWeight, result.getTotalWeight());
     }

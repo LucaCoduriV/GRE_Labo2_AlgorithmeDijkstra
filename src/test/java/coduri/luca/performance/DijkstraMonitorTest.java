@@ -14,7 +14,6 @@ class DijkstraMonitorTest {
         var graph = GraphGenerator.graph10000;
         var monitor = new DijkstraMonitor();
         new DijkstraSimple(graph, 0, 100, monitor).resolve();
-        System.out.println(monitor.getIterationCount());
         assertNotEquals(0,monitor.getIterationCount());
     }
 
@@ -23,7 +22,6 @@ class DijkstraMonitorTest {
         var graph = GraphGenerator.graph10000;
         var monitor = new DijkstraMonitor();
         new DijkstraBidirectional(graph, 0, 100, monitor).resolve();
-        System.out.println(monitor.getIterationCount());
         assertNotEquals(0,monitor.getIterationCount());
     }
 }

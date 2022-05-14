@@ -6,6 +6,10 @@ import graph.core.impl.SimpleWeightedEdge;
 
 import java.util.LinkedList;
 
+/**
+ * Implémentation de l'algorithme de Dijkstra en bidirectional.
+ * @implNote Cette implémentation est basée sur l'implémentation de Dijkstra en unidirectionnel.
+ */
 public class DijkstraBidirectional implements Dijkstra{
     private DijkstraSimple forward;
     private DijkstraSimple backward;
@@ -43,6 +47,14 @@ public class DijkstraBidirectional implements Dijkstra{
         return this;
     }
 
+    /**
+     * Permet de faire une itération de l'algorithme de Dijkstra en avant ou en arrière.
+     * Puis de vérifier si le chemin le plus court est déjà trouvé.
+     * @param lastPulledOut
+     * @param dijkstra1
+     * @param dijkstra2
+     * @return True si l'algorithme est terminé, false sinon.
+     */
     private boolean adHoc(int[] lastPulledOut, DijkstraSimple dijkstra1, DijkstraSimple dijkstra2) {
         dijkstra1.nextIt();
         lastPulledOut[0] = dijkstra1.getLastCoupleRemoved().getVertex().id();

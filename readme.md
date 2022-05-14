@@ -5,6 +5,11 @@
 Dans le cadre du cours de graphe et réseau à la HEIG, j'ai dû implémenter en java la version simple et bidirectionnel de Dijkstra.
 Ce laboratoire nous permet de mieux comprendre le fonctionnement de l'algorithme ainsi que les avantages et inconvenient de sa version bidirectionnelle.
 
+## Choix d'implémentation
+Pour ce projet, j'ai choisi d'utiliser Maven afin d'effectuer des tests.
+J'ai trouvé ça particulièrement pratique, car en modifiant le code, je pouvais vérifier que tout fonctionnait encore.
+
+
 ## Méthode d'analyse
 Pour pouvoir comparer les 2 variantes de Dijkstra il est nécessaire de récolter des données.
 Il nous est donc demandé de générer 1000 sommets source et target que l'on fourni à nos algorithmes.

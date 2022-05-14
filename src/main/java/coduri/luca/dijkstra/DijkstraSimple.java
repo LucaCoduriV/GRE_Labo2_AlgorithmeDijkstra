@@ -80,18 +80,7 @@ public class DijkstraSimple implements Dijkstra {
     }
 
     public Path getPath(){
-        Couple[] couples = pq.couples();
-        LinkedList<Integer> l = new LinkedList<>();
-        long totalWeight = couples[destinationId].getWeight();
-        int nextId = destinationId;
-        while(true){
-            var curr = couples[nextId];
-            l.addFirst(curr.getVertex().id());
-            if(curr.getPredecessor() == null) break;
-            nextId = curr.getPredecessor().id();
-        }
-
-        return new Path(totalWeight, l.stream().mapToInt(i -> i).toArray());
+        return Path.buildPath(pq.couples(), destinationId, false);
     }
 
     Couple getLastCoupleRemoved() {

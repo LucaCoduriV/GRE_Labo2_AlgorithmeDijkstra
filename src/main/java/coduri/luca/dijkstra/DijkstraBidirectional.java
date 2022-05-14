@@ -63,12 +63,10 @@ public class DijkstraBidirectional implements Dijkstra{
             final long weight = forward.getState()[v.to().id()].getWeight() + backward.getState()[v.to().id()].getWeight();
 
             if(dijkstra2.getState()[v.to().id()].isCompleted() && weight < bestPath.getTotalWeight()){
-                final Path newPathF = getPath(forward.getState(), v.to().id(), false);
-                final Path newPathB = getPath(backward.getState(), v.to().id(), true);
+                final Path newPathF = Path.buildPath(forward.getState(), v.to().id(), false);
+                final Path newPathB = Path.buildPath(backward.getState(), v.to().id(), true);
                 bestPath = Path.joinPath(newPathF, newPathB);
             }
-
-
         });
 
         return dijkstra2.getPrioQueue().get(lastPulledOut[0]).isCompleted();
@@ -77,25 +75,5 @@ public class DijkstraBidirectional implements Dijkstra{
     @Override
     public Path getPath() {
         return bestPath;
-    }
-
-    private static Path getPath(Couple[] couples, int destinationId, boolean removeLast){
-        if(couples[destinationId].getPredecessor() == null){
-            return new Path(0, new int[0]);
-        }
-
-        LinkedList<Integer> l = new LinkedList<>();
-
-        long totalWeight = couples[destinationId].getWeight();
-        int nextId = removeLast ? couples[destinationId].getPredecessor().id() : destinationId;
-
-        while(true){
-            var curr = couples[nextId];
-            l.addFirst(curr.getVertex().id());
-            if(curr.getPredecessor() == null) break;
-            nextId = curr.getPredecessor().id();
-        }
-
-        return new Path(totalWeight, l.stream().mapToInt(i -> i).toArray());
     }
 }

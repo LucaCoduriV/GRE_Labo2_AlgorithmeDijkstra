@@ -74,6 +74,8 @@ Voici un aperçu des 20 premières lignes de mes [résultats](results.md) :
 
 **Temps moyen simple: `22.533634783 ms`**
 
+
+
 ## Conclusion
 On remarque que l'algorithme Dijkstra bidirectionnel est le grand vainqueur de ce test.
 Ce dernier itère beaucoup moins que la version simple ce qui lui permet en grande majorité d'être plus rapide dans la résolution du chemin le plus court.

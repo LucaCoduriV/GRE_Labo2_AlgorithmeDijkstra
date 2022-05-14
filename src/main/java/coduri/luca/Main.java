@@ -72,8 +72,8 @@ public class Main {
     static String toMarkdownTable(){
         StringBuilder result = new StringBuilder();
 
-        result.append("| n°   | source | destination | nb itérations simple | nb itérations bidir | temps simple (ms) | temps bidir (ms) |\n");
-        result.append("|------|--------|-------------|----------------------|---------------------|-------------------|------------------|\n");
+        result.append("| n°   | source | destination | distance | nb itérations simple | nb itérations bidir | temps simple (ms) | temps bidir (ms) |\n");
+        result.append("|------|--------|-------------|----------|----------------------|---------------------|-------------------|------------------|\n");
 
         double moyenneTempsSimple = 0;
         double moyenneTempsBidir = 0;
@@ -87,6 +87,7 @@ public class Main {
                     .append(padRight(String.valueOf((i + 1)), 4, ' ')).append(" | ")
                     .append(padRight(String.valueOf(sources.get(i)), 6, ' ')).append(" | ")
                     .append(padRight(String.valueOf(targets.get(i)), 11, ' ')).append(" | ")
+                    .append(padRight(String.valueOf(pathsSimple.get(i).getTotalWeight()), 8, ' ')).append(" | ")
                     .append(padRight(String.valueOf(itSimple.get(i)),20, ' ')).append(" | ")
                     .append(padRight(String.valueOf(itBidirectional.get(i)), 19, ' ')).append(" | ")
                     .append(padRight(String.valueOf((double)(simpleExecTimes.get(i)) / 1000000), 17, ' ')).append(" | ")

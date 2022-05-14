@@ -7,11 +7,13 @@
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="factorisation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Couple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Couple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/CouplePrioQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.md" beforeDir="false" afterPath="$PROJECT_DIR$/results.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/EdgeImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/performance/DijkstraMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/performance/DijkstraMonitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220514_0002",
+    "com.google.cloudcode.ide_session_index": "20220514_0003",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
@@ -83,7 +85,7 @@
       <recent name="coduri.luca.dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in GRE_Labo2_AlgorithmeDijkstra">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coduri.luca.Main" />
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
@@ -179,9 +181,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DijkstraMonitorTest.getIterationCountDijkstraBi" />
         <item itemvalue="JUnit.DijkstraMonitorTest.getIterationCountDijkstraSimple" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DijkstraSimpleTest.resolve50000_2" />
         <item itemvalue="JUnit.DijkstraBidirectionalTest.resolve50000_1" />
       </list>

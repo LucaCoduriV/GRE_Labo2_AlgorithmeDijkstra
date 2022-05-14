@@ -1,6 +1,7 @@
 package coduri.luca.dijkstra;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Path {
     private final long totalWeight;
@@ -11,10 +12,17 @@ public class Path {
         this.path = path;
     }
 
+    /**
+     * Le poids total du chemin.
+     * @return distance.
+     */
     public long getTotalWeight() {
         return totalWeight;
     }
 
+    /**
+     * @return un taleau d'entiers représentant le chemin.
+     */
     public int[] getPath() {
         return path;
     }
@@ -29,6 +37,33 @@ public class Path {
         }
 
         return new Path(forward.totalWeight + backward.totalWeight, newPath);
+    }
+
+    /**
+     * Permet de construire le chemin à partir d'un tableau de couples.
+     * @param couples tableau de couples
+     * @param destinationId id de la destination
+     * @param removeLast true si on doit supprimer le dernier élément du chemin
+     * @return chemin
+     */
+    static Path buildPath(Couple[] couples, int destinationId, boolean removeLast){
+        if(couples[destinationId].getPredecessor() == null){
+            return new Path(0, new int[0]);
+        }
+
+        LinkedList<Integer> l = new LinkedList<>();
+
+        long totalWeight = couples[destinationId].getWeight();
+        int nextId = removeLast ? couples[destinationId].getPredecessor().id() : destinationId;
+
+        while(true){
+            var curr = couples[nextId];
+            l.addFirst(curr.getVertex().id());
+            if(curr.getPredecessor() == null) break;
+            nextId = curr.getPredecessor().id();
+        }
+
+        return new Path(totalWeight, l.stream().mapToInt(i -> i).toArray());
     }
 
     @Override

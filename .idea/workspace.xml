@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="factorisation">
+      <change afterPath="$PROJECT_DIR$/it_moustache.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/time_moustache.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results.md" beforeDir="false" afterPath="$PROJECT_DIR$/results.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/Path.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/graph/EdgeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/performance/DijkstraMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/performance/DijkstraMonitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20220514_0003",
+    "com.google.cloudcode.ide_session_index": "20220515_0001",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
@@ -206,6 +202,7 @@
       <workItem from="1652103058880" duration="1583000" />
       <workItem from="1652104877863" duration="3158000" />
       <workItem from="1652531907741" duration="7424000" />
+      <workItem from="1652624154797" duration="1403000" />
     </task>
     <task id="LOCAL-00001" summary="WIP">
       <created>1651705670067</created>

@@ -16,6 +16,7 @@ public class DijkstraBidirectional implements Dijkstra{
     private final int destinationId;
 
     private final DijkstraCallback callback;
+    private boolean isDone = false;
 
     private Path bestPath;
     public DijkstraBidirectional(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback){
@@ -23,7 +24,13 @@ public class DijkstraBidirectional implements Dijkstra{
         this.graph = graph;
         this.sourceId = sourceId;
         this.destinationId = destinationId;
-        this.bestPath = new Path(Couple.INFINITY, new int[0]);
+        if(sourceId == destinationId){
+            this.bestPath = new Path(0, new int[]{sourceId});
+            isDone = true;
+        }else{
+            this.bestPath = new Path(Couple.INFINITY, new int[0]);
+        }
+
     }
 
     public DijkstraBidirectional(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId){
@@ -31,6 +38,7 @@ public class DijkstraBidirectional implements Dijkstra{
     }
 
     public Dijkstra resolve(){
+        if(isDone) return this;
         this.forward = new DijkstraSimple(graph, sourceId, destinationId, callback);
         this.backward = new DijkstraSimple(graph, destinationId, destinationId, callback);
 

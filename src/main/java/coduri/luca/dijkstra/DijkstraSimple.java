@@ -18,8 +18,13 @@ public class DijkstraSimple implements Dijkstra {
     private final CouplePrioQueue pq;
     private final int destinationId;
     private final int sourceId;
+    private boolean isDone = false;
 
     public DijkstraSimple(Digraph<VertexImpl, SimpleWeightedEdge<VertexImpl>> graph, int sourceId, int destinationId, DijkstraCallback callback) {
+        if(graph == null) throw new IllegalArgumentException("Le graphe ne peut être null");
+        if(sourceId == destinationId){
+            isDone = true;
+        }
         this.destinationId = destinationId;
         this.sourceId = sourceId;
         this.graph = graph;
@@ -37,6 +42,7 @@ public class DijkstraSimple implements Dijkstra {
     }
 
     public DijkstraSimple resolve(){
+        if(isDone) return this;
         while(nextIt());
         return this;
     }
@@ -88,6 +94,7 @@ public class DijkstraSimple implements Dijkstra {
     }
 
     public Path getPath(){
+        if(destinationId == sourceId) return new Path(0, new int[]{sourceId});
         return Path.buildPath(pq.couples(), destinationId, false);
     }
 

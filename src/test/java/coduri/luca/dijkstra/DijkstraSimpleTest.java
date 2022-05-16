@@ -19,6 +19,18 @@ class DijkstraSimpleTest {
     }
 
     @Test
+    void resolve15_0_to_0() {
+        var graph = GraphGenerator.graph15;
+
+        var result = new DijkstraSimple(graph, 0, 0).resolve().getPath();
+        int[] expected = {0};
+        long expectedWeight = 0;
+
+        assertArrayEquals(expected, result.getPath());
+        assertEquals(expectedWeight, result.getDistance());
+    }
+
+    @Test
     void resolve10000_1() {
         var graph = GraphGenerator.graph10000;
 

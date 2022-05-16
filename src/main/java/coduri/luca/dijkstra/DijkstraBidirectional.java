@@ -49,7 +49,7 @@ public class DijkstraBidirectional implements Dijkstra{
             if (adHoc(lastForward, forward, backward)) break;
             if (adHoc(lastBackward, backward, forward)) break;
         }
-
+        isDone = true;
         return this;
     }
 

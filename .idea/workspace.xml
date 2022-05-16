@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca34272-7bf2-44cd-8a32-7a33b9066a78" name="Changes" comment="factorisation">
+      <change afterPath="$PROJECT_DIR$/GRE_Labo2_Luca_Coduri.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraBidirectional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coduri/luca/dijkstra/DijkstraSimple.java" afterDir="false" />
@@ -80,7 +81,7 @@
       <recent name="coduri.luca.dijkstra" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.coduri.luca in GRE_Labo2_AlgorithmeDijkstra">
+  <component name="RunManager" selected="JUnit.All in GRE_Labo2_AlgorithmeDijkstra">
     <configuration name="All in GRE_Labo2_AlgorithmeDijkstra" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="GRE_Labo2_AlgorithmeDijkstra" />
       <option name="PACKAGE_NAME" value="" />
@@ -204,7 +205,7 @@
       <workItem from="1652531907741" duration="7424000" />
       <workItem from="1652624154797" duration="1403000" />
       <workItem from="1652692073955" duration="5682000" />
-      <workItem from="1652704391259" duration="3248000" />
+      <workItem from="1652704391259" duration="3348000" />
     </task>
     <task id="LOCAL-00001" summary="WIP">
       <created>1651705670067</created>

@@ -44,6 +44,7 @@ public class DijkstraSimple implements Dijkstra {
     public DijkstraSimple resolve(){
         if(isDone) return this;
         while(nextIt());
+        isDone = true;
         return this;
     }
 

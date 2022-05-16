@@ -4,8 +4,6 @@ import coduri.luca.graph.VertexImpl;
 import graph.core.impl.Digraph;
 import graph.core.impl.SimpleWeightedEdge;
 
-import java.util.LinkedList;
-
 /**
  * Implémentation de l'algorithme de Dijkstra en bidirectional.
  * @implNote Cette implémentation est basée sur l'implémentation de Dijkstra en unidirectionnel.
@@ -36,7 +34,7 @@ public class DijkstraBidirectional implements Dijkstra{
         this.forward = new DijkstraSimple(graph, sourceId, destinationId, callback);
         this.backward = new DijkstraSimple(graph, destinationId, destinationId, callback);
 
-        int[] lastForward = {-1};
+        int[] lastForward = {-1}; // contenu dans un tableau pour pouvoir être passé par référence.
         int[] lastBackward = {-1};
 
         while(true){
@@ -50,9 +48,9 @@ public class DijkstraBidirectional implements Dijkstra{
     /**
      * Permet de faire une itération de l'algorithme de Dijkstra en avant ou en arrière.
      * Puis de vérifier si le chemin le plus court est déjà trouvé.
-     * @param lastPulledOut
-     * @param dijkstra1
-     * @param dijkstra2
+     * @param lastPulledOut le dernier sommet que l'on a retiré de la liste des sommets à traiter.
+     * @param dijkstra1 Dijkstra dans lequel on retire un sommet.
+     * @param dijkstra2 Dijkstra avec lequel on compare le sommet retiré.
      * @return True si l'algorithme est terminé, false sinon.
      */
     private boolean adHoc(int[] lastPulledOut, DijkstraSimple dijkstra1, DijkstraSimple dijkstra2) {
@@ -62,7 +60,7 @@ public class DijkstraBidirectional implements Dijkstra{
         graph.getSuccessorList(lastPulledOut[0]).forEach(v ->{
             final long weight = forward.getState()[v.to().id()].getWeight() + backward.getState()[v.to().id()].getWeight();
 
-            if(dijkstra2.getState()[v.to().id()].isCompleted() && weight < bestPath.getTotalWeight()){
+            if(dijkstra2.getState()[v.to().id()].isCompleted() && weight < bestPath.getDistance()){
                 final Path newPathF = Path.buildPath(forward.getState(), v.to().id(), false);
                 final Path newPathB = Path.buildPath(backward.getState(), v.to().id(), true);
                 bestPath = Path.joinPath(newPathF, newPathB);

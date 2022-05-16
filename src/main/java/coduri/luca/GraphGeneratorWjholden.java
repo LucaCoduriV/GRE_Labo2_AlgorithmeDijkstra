@@ -15,11 +15,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-public class GraphGenerator2 {
-    /*
-     * NE PAS MODIFIER
-     * Les fichiers de données sont à placer à la racine de ce répertoire
-     */
+/**
+ * Cette classe permet de générer un fichier contenant [vertex1] [vertex2] [weight]
+ * Cette à été utilisé uniquement dans le but de pouvoir comparer mes résultats avec ceux du site <a href="https://wjholden.com/dijkstra">Dijkstra resolver</a>
+ */
+public class GraphGeneratorWjholden {
     private static final String DATA_FOLDER = "data/";
     private static final int NB_VERTICES = 15;
 

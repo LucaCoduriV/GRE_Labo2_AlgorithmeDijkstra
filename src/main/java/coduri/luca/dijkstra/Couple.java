@@ -3,9 +3,9 @@ package coduri.luca.dijkstra;
 import coduri.luca.graph.VertexImpl;
 
 /**
- * Cette classe permet de stocker le couple (λ,p) pour les sommet de L.
+ * Cette classe permet de stocker le couple (λ, p) pour les sommets de L.
  * Voir la page 150 du chapitre 5.1 du cours de GRE.
- * docs/GRE-2122b-chapitre5.1.pdf
+ * <a href="docs/GRE-2122b-chapitre5.1.pdf">GRE Chapitre 5.1</a>
  */
 public class Couple implements Comparable<Couple> {
     static final long INFINITY = Long.MAX_VALUE;
@@ -61,7 +61,7 @@ public class Couple implements Comparable<Couple> {
     /**
      *
      * @param o Le sommet avec qui comparer.
-     * @implNote Ne retourne jamais 0, car si les poids sont égaux on compare l'id su sommet.
+     * @implNote Ne retourne jamais 0, car si les poids sont égaux on compare l'id du sommet.
      * @return un nombre négatif si le couple courant est inférieur à o et un nombre positif si le couple courant est supérieur à o.
      */
     @Override

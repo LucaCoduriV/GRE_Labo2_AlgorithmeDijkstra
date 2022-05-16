@@ -16,7 +16,7 @@ public class Path {
      * Le poids total du chemin.
      * @return distance.
      */
-    public long getTotalWeight() {
+    public long getDistance() {
         return totalWeight;
     }
 
@@ -27,6 +27,12 @@ public class Path {
         return path;
     }
 
+    /**
+     * Permet de lier deux chemins pour l'algorithme de Dijkstra bidirectionnel.
+     * @param forward chemin du point de départ vers la destination
+     * @param backward chemin de la destination vers le point de départ
+     * @return un nouveau chemin.
+     */
     static Path joinPath(Path forward, Path backward){
         final int[] newPath = new int[forward.path.length + backward.path.length];
         System.arraycopy(forward.path,0,newPath,0,forward.path.length);

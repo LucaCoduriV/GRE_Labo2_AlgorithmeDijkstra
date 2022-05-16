@@ -41,6 +41,10 @@ public class DijkstraSimple implements Dijkstra {
         return this;
     }
 
+    /**
+     * Permet de faire une itération de l'algorithme de Dijkstra.
+     * @return
+     */
     boolean nextIt(){
 
         if((lastCoupleRemoved = pq.poll()) == null){
@@ -66,6 +70,10 @@ public class DijkstraSimple implements Dijkstra {
         return pq;
     }
 
+    /**
+     * Permet de visiter les successeurs d'un sommet et de mettre à jour les couples.
+     * @param couple
+     */
     private void visitSuccessors(Couple couple){
         var successors = graph.getSuccessorList(couple.getVertex().id());
         final Couple[] couples = pq.couples();
@@ -83,6 +91,10 @@ public class DijkstraSimple implements Dijkstra {
         return Path.buildPath(pq.couples(), destinationId, false);
     }
 
+    /**
+     * Permet d'avoir le dernier sommet retiré de la file avec le couple qui lui est associé
+     * @return le dernier couple retiré de la file.
+     */
     Couple getLastCoupleRemoved() {
         return lastCoupleRemoved;
     }

@@ -12,8 +12,8 @@ public interface Dijkstra {
     Dijkstra resolve();
 
     /**
-     * @return Un objet Path contenant le chemin le plus court entre le nœud
-     * de départ et le nœud d'arrivée. Ainsi que la distance entre ces deux
+     * @return Un objet Path contenant le chemin le plus court entre le sommet
+     * de départ et le sommet d'arrivée. Ainsi que la distance entre ces deux
      * nœuds.
      */
     Path getPath();

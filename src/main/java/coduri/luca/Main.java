@@ -87,7 +87,7 @@ public class Main {
                     .append(padRight(String.valueOf((i + 1)), 4, ' ')).append(" | ")
                     .append(padRight(String.valueOf(sources.get(i)), 6, ' ')).append(" | ")
                     .append(padRight(String.valueOf(targets.get(i)), 11, ' ')).append(" | ")
-                    .append(padRight(String.valueOf(pathsSimple.get(i).getTotalWeight()), 8, ' ')).append(" | ")
+                    .append(padRight(String.valueOf(pathsSimple.get(i).getDistance()), 8, ' ')).append(" | ")
                     .append(padRight(String.valueOf(itSimple.get(i)),20, ' ')).append(" | ")
                     .append(padRight(String.valueOf(itBidirectional.get(i)), 19, ' ')).append(" | ")
                     .append(padRight(String.valueOf((double)(simpleExecTimes.get(i)) / 1000000), 17, ' ')).append(" | ")

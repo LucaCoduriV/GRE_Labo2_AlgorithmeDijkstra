@@ -15,7 +15,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 9;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -27,7 +27,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 3641;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -38,7 +38,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 1646;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -49,7 +49,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 146;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
     @Test
     void resolve50000_1() {
@@ -58,7 +58,7 @@ class DijkstraBidirectionalTest {
         int[] expected = {};
         long expectedWeight = 4195;
         //assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -69,7 +69,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 3550;
 
         //assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -80,7 +80,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 5899;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
     @Test
@@ -91,7 +91,7 @@ class DijkstraBidirectionalTest {
         long expectedWeight = 151;
 
         assertArrayEquals(expected, result.getPath());
-        assertEquals(expectedWeight, result.getTotalWeight());
+        assertEquals(expectedWeight, result.getDistance());
     }
 
 }
